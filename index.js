@@ -1,6 +1,6 @@
 async function get_stuff(idCounter) {
   const url = new URL(window.location.href);
-  const isNSFW = url.search.includes('nsfw');
+  const isNSFW = url.search.includes('nsfw') ? 'true' : 'false';
   const resp = await fetch('https://api.waifu.im/random/?is_nsfw='+isNSFW+'&orientation=PORTRAIT&many=true');
   const links = await resp.json();
   console.table(links.images);
