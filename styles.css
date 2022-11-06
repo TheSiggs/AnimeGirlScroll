@@ -40,7 +40,7 @@ body {
     display: grid;
     grid-auto-flow: row;
     gap: 1rem;
-    width: calc(540px + 1rem);
+    width: clamp(370px, 100vw, calc(540px + 1rem));
     padding: 0 0.25rem;
     height: 100vh;
     overflow-y: auto;
@@ -54,7 +54,7 @@ body {
 }
 
 .slides img {
-    width: 540px;
+    width: clamp(370px, 100vw, 540px);
     object-fit: contain;
 }
 
