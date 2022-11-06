@@ -8,40 +8,10 @@ body {
     justify-content: center;
 }
 
-.thumbnails {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.thumbnails img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.scrollbar {
-    width: 1px;
-    height: 720px;
-    background: #ccc;
-    display: block;
-    margin: 0 0 0 8px;
-}
-
-.thumb {
-    width: 1px;
-    position: absolute;
-    height: 0;
-    background: #000;
-}
-
 .slides {
-    margin: 0 16px;
     display: grid;
     grid-auto-flow: row;
-    gap: 1rem;
-    width: clamp(300px, 90vw, calc(540px + 1rem));
-    padding: 0 0.25rem;
+    width: clamp(300px, 85vw, calc(540px + 1rem));
     height: 100vh;
     overflow-y: auto;
     overscroll-behavior-y: contain;
@@ -54,7 +24,7 @@ body {
 }
 
 .slides img {
-    width: clamp(300px, 90vw, 540px);
+    width: clamp(300px, 85vw, 540px);
     object-fit: contain;
 }
 
