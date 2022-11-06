@@ -1,5 +1,7 @@
 async function get_stuff(idCounter) {
-  const resp = await fetch('https://api.waifu.im/random/?is_nsfw=false&orientation=PORTRAIT&many=true');
+  const url = new URL(window.location.href);
+  const isNSFW = url.search.includes('nsfw');
+  const resp = await fetch('https://api.waifu.im/random/?is_nsfw='+isNSFW+'&orientation=PORTRAIT&many=true');
   const links = await resp.json();
   console.table(links.images);
   links.images.forEach((link) => {
